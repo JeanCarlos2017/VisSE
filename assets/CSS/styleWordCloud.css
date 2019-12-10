@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+
+}
+
+#word-cloud{
+    border: double;
+    overflow-y: scroll;
+    height: 400px;
+    background-color: aliceblue;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+    <title>Leitor Google Acadêmico</title>
+
+</head>
+<body>
+<nav id="menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="BubbleChart.html" target="_blank">Bubble Chart: Citação</a></li>
+        <li><a href="BubbleChartII.html" target="_blank">Bubble Chart: Palavras</a></li>
+        <li><a href="HorizontalBarChart.html" target="_blank" >Horizontal Bar Chart</a></li>
+        <li><a href="WordCloud.html" target="_blank">Word Cloud</a></li>
+        <li><a href="GrafoJanelaUnica.html" target="_blank">Grafo Dependência</a></li>
+        <li><a href="LineChart.html" target="_blank">Line Chart</a></li>
+        <li><a href="Dashboard.html" target="_blank">Dashboard</a></li>
+    </ul>
+</nav>
+
+<div id = "page-container">
+    Por favor selecione o(s) arquivo(s):
+
+    <input id="txtfiletoread" multiple type="file">
+    <output id="list"></output>
+
+    <div>Conteúdo do refinado:</div>
+    <div id="textoRefinado"> </div>
+
+    <div>Conteúdo do arquivo:</div>
+    <div id="filecontents"></div>
+
+</div>
+<div id="tabela"></div>
+
+
+<div id = "graph-visualization"> </div>
+
+</body>
+</html>
+
+<script type='text/javascript' src='../JS/Pre-Visualizacao/coletorGoogleAcademico.js'></script>
+<script>
+    coletor();
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BubbleChart: Citações</title>
+
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/04C6A97E-A156-1C4C-8C7E-F2AE1E48DE7A/main.js" charset="UTF-8"></script>
+    <link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/9F7D3045-EC91-2E43-B93A-1676070752FF/abn/main.css"/>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <script src="../JS/ControladoresDeEventos/ControladorDeEventosBBChartCitation.js"></script>
+
+</head>
+<body>
+  <p>
+      Bubble Chart baseado na quantidade de vezes que o artigo/livro foi citado.
+  </p>
+  <div id="graph-visualization"></div>
+</body>
+</html>
+
+<script src="../JS/Pre-Visualizacao/Pre-Visualizacao.js"></script>
+<script src="../JS/Visualizacao/bubble-chart.js"></script>
+<script src="../JS/ControladoresDeEventos/ControladorDeEventosBBChartCitation.js"></script>
+
+<script>
+    var bbChart = new BBChart();
+    bbChart.construtorCitacao();
+</script>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplas visualizações</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="CSS/styleDashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,700" type="text/css"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</head>
+<body>
+    <header class="cabecalho">
+        <!--<button class="logo" onclick="coletor()"> Seleciona o arquivo: </button> -->
+        <!--<button class="btn-menu"><i class="large material-icons">menu</i> </button> -->
+        <div class="pesquisa">
+            <!-- <p class="cabecalho-pesquisa"> Pesquisa: <input type="text" maxlength="30"> <button> Ir!</button> </p> -->
+            <div class="quantidade-respostas">Quantidade de Respostas: <p id="quantidade-respostas-paragrafo"> - </p> </div>
+            <div  id="pesquisaInteressada" class="pesquisa-atual">
+                Boa interação!
+            </div>
+        </div>
+
+
+        <nav class="menu">
+            <a class="btn-close">x</a>
+            <ul>
+                <li class="firstMenu" ><a href="#">Visualização do topo a esquerda</a>
+                    <ul class="menuSecundario">
+                        <li><a href="BubbleChart.html" target="first" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChart', 'first')">Bubble Chart: Citação</a></li>
+                        <li><a href="BubbleChartII.html" target="first" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChartII', 'first')">Bubble Chart: Palavras</a></li>
+                        <li><a href="HorizontalBarChart.html" target="first" onclick="$preControlador.salvaVisualizacoesAtivas('HorizontalBarChart', 'first')">Horizontal Bar Chart</a></li>
+                        <li><a href="WordCloud.html" target="first" onclick="$preControlador.salvaVisualizacoesAtivas('WordCloud', 'first')">Word Cloud</a></li>
+                        <li><a href="GrafoII.html" target="first" onclick="$preControlador.salvaVisualizacoesAtivas('Grafo', 'first')">Graph Dependency: Palavras</a></li>
+                        <li><a href="LineChart.html" target="first" onclick="$preControlador.salvaVisualizacoesAtivas('LineChart', 'first')">Line Chart</a></li>
+                    </ul>
+                <li class="secondMenu" ><a href="#">Visualização do topo a direita</a>
+                    <ul class="menuSecundario">
+                        <li><a href="BubbleChart.html" target="second" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChart', 'second')">Bubble Chart: Citação</a></li>
+                        <li><a href="BubbleChartII.html" target="second" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChartII', 'second')">Bubble Chart: Palavras</a></li>
+                        <li><a href="HorizontalBarChart.html" target="second" onclick="$preControlador.salvaVisualizacoesAtivas('HorizontalBarChart', 'second')">Horizontal Bar Chart</a></li>
+                        <li><a href="WordCloud.html" target="second" onclick="$preControlador.salvaVisualizacoesAtivas('WordCloud', 'second')">Word Cloud</a></li>
+                        <li><a href="GrafoII.html" target="second" onclick="$preControlador.salvaVisualizacoesAtivas('Grafo', 'second')">Graph Dependency: Palavras</a></li>
+                        <li><a href="LineChart.html" target="second" onclick="$preControlador.salvaVisualizacoesAtivas('LineChart', 'second')">Line Chart</a></li>
+                    </ul>
+                <li class="thirdMenu"><a href="#">Visualização do inferior a esquerda</a>
+                    <ul class="menuSecundario">
+                        <li><a href="BubbleChart.html" target="third" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChart', 'third')">Bubble Chart: Citação</a></li>
+                        <li><a href="BubbleChartII.html" target="third" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChartII', 'third')">Bubble Chart: Palavras</a></li>
+                        <li><a href="HorizontalBarChart.html" target="third" onclick="$preControlador.salvaVisualizacoesAtivas('HorizontalBarChart', 'third')">Horizontal Bar Chart</a></li>
+                        <li><a href="WordCloud.html" target="third" onclick="$preControlador.salvaVisualizacoesAtivas('WordCloud', 'third')">Word Cloud</a></li>
+                        <li><a href="GrafoII.html" target="third" onclick="$preControlador.salvaVisualizacoesAtivas('Grafo', 'third')">Graph Dependency: Palavras</a></li>
+                        <li><a href="LineChart.html" target="third" onclick="$preControlador.salvaVisualizacoesAtivas('LineChart', 'third')">Line Chart</a></li>
+                    </ul>
+                <li class="fourthMenu"><a href="#">Visualização do inferior a direita</a>
+                    <ul class="menuSecundario">
+                        <li><a href="BubbleChart.html" target="fourth" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChart', 'fourth')">Bubble Chart: Citação</a></li>
+                        <li><a href="BubbleChartII.html" target="fourth" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChartII', 'fourth')">Bubble Chart: Palavras</a></li>
+                        <li><a href="HorizontalBarChart.html" target="fourth" onclick="$preControlador.salvaVisualizacoesAtivas('HorizontalBarChart', 'fourth')">Horizontal Bar Chart</a></li>
+                        <li><a href="WordCloud.html" target="fourth" onclick="$preControlador.salvaVisualizacoesAtivas('WordCloud', 'fourth')">Word Cloud</a></li>
+                        <li><a href="GrafoII.html" target="fourth" onclick="$preControlador.salvaVisualizacoesAtivas('Grafo', 'fourth')">Graph Dependency: Palavras</a></li>
+                        <li><a href="LineChart.html" target="fourth" onclick="$preControlador.salvaVisualizacoesAtivas('LineChart', 'fourth')">Line Chart</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+
+    </div>
+    <section class="corpo">
+        <section class="paineis">
+           <div id="primeiroPainel" class="firstVisualization" >
+               <button class="btn-menu-um"> </button>
+               <nav class="menu-um">
+                  <a class="btn-close-um">x</a>
+                   <ul>
+                       <li><a href="BubbleChart.html" target="first" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChart', 'first')">Bubble Chart: Citação</a></li>
+                       <li><a href="BubbleChartII.html" target="first" onclick="$preControlador.salvaVisualizacoesAtivas('BubbleChartII', 'first')">Bubble Chart: Palavras</a></li>
+                   </ul>
+               </nav>
+               <iframe id="first" name="first" frameborder='0' height="100%" width="100%" ></iframe>
+           </div>
+           <div class="secondVisualization">
+               <button class="btn-menu-dois"> </button>
+               <nav class="menu-dois">
+                   <a class="btn-close-dois">x</a>
+                   <ul>
+                       <li><a href="HorizontalBarChart.html" target="second" onclick="$preControlador.salvaVisualizacoesAtivas('HorizontalBarChart', 'second')">Horizontal Bar Chart</a></li>
+                       <li><a href="WordCloud.html" target="second" onclick="$preControlador.salvaVisualizacoesAtivas('WordCloud', 'second')">Word Cloud</a></li>
+                   </ul>
+               </nav>
+               <div id="word-cloud"></div>
+                    <iframe id="second" name="second" frameborder='0' height="100%" width="100%" ></iframe>
+           </div>
+
+           <div class="thirdVisualization">
+                   <iframe src="LineChart.html" id="third" name="third" frameborder='0' height="100%" width="100%" ></iframe>
+            </div>
+            <div class="fourthVisualization">
+                    <iframe src="GrafoII.html" id = "fourth" name="fourth" frameborder='0' height="100%" width="100%" ></iframe>
+            </div>
+        </section>
+        <!-- <div id="todasPesquisas" class="todasRespostas"></div> -->
+    </section>
+
+</body>
+</html>
+
+
+<script src="../JS/ControladoresDeEventos/PreControlador.js"> </script>
+<script src="../JS/ControladoresDeEventos/controladorDeEventos.js"></script>
+
+<script>
+    //para o menu
+    $(".btn-menu").click(function() {
+        $(".menu").show();
+    });
+    $(".btn-close").click(function() {
+        $(".menu").hide();
+    });
+
+    $(".btn-menu-um").click(function() {
+        $(".menu-um").show();
+    });
+    $(".btn-close-um").click(function() {
+        $(".menu-um").hide();
+    });
+
+    $(".btn-menu-dois").click(function() {
+        $(".menu-dois").show();
+    });
+    $(".btn-close-dois").click(function() {
+        $(".menu-dois").hide();
+    });
+
+</script>
+<script>
+    //jquery
+    //para as divs pesquisa atual...
+    $(".pesquisa-atual").hover(function(){
+        $(this).css("height", "150px");
+    }, function () {
+        $(this).css("height", "40px");
+    });
+
+    $('.secondMenu > li > a').click(function(){
+        alert($('ul > li').index($(this).parent()));
+
+    });
+</script>
+
+<script>
+    //javascript
+    //salvando o tamanho da janela
+     var $preControlador = new PreControlador();
+     $preControlador.setTamanhoJanela("primeiroPainel"); //considero que todos tem o memso tamanho
+     var $controladorPB = new controladorDeEventos();
+     $controladorPB.setQuantidadeDeResposta();
+</script>

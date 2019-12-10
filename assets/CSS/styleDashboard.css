@@ -1,0 +1,93 @@
+/*==============Reset============*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border:none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif ;
+}
+
+body{
+    background-color: #EDEDED;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+.cabecalho{width: 100%; float: left; padding: 1% 2%;}
+.logo{width: 56px; height: 56px; float: left; background: url("../img/fileSelector.jpg") center center/56px no-repeat; font-size: 0;}
+.btn-menu{width: 56px; height: 56px; float: right; text-align: center; color: #fffbfb; border-radius: 56px;
+    cursor:pointer; background: linear-gradient(to right , orange, black)}
+/*Menu*/
+.menu{display: none; width: 100%; height: 100%; position: fixed; background-color: rgba(0,0,0,0.9); top:0; left: 0; }
+.btn-close{font-size: 3em; color: white; float: right; cursor: pointer; margin-right: 5%;}
+.menu li{width: 100%; float: left; text-align: center; }
+.menu li{ padding:1%}
+.menu li a{font-size: 1.5em; color: white; padding: 1.5% 3%;}
+.menu li a:hover{border: 1px solid orangered;}
+.menu li ul{display: none; }
+.menu li:hover ul { display: block; }
+.menuSecundario li a{color: #cce5ff}
+/* PARTE DA PESQUISA ATUAL */
+.cabecalho .cabecalho-pesquisa{float: left; width: 75%; height: 16px;}
+.cabecalho .pesquisa-atual {border: 1px solid #ffab00; border-radius: 5px; background-color: white; float: left; width: 75%; height: 40px;
+    overflow: auto; overflow-wrap: break-word; word-wrap: break-word; margin-left: 1%;}
+.cabecalho .quantidade-respostas {float: right; border: 1.5px solid #ffab00; border-radius: 5px; width: 10%; height: 56px; margin-right: 2%; overflow: auto; text-align: center}
+.cabecalho .quantidade-respostas #qunatidade-respostas-paragrafo {color: lightslategray; text-align: center; font-weight: bold;}
+    /*Banner*/
+.banner{width: 100%; float: left; text-align: center; padding: 3% 4%; background: url("../img/pesquisaFundo.jpg") repeat fixed }
+
+/* corpo */
+.corpo {display: inline-block; width: 100%;
+    float: left;}
+/*paineis*/
+.paineis{border: 1px solid #ffab00; border-radius: 5px; margin: 1.5%;padding: 0.5% 1%;
+    width: 100%; height: 70vh; float: left; display: inline-block;}
+.paineis div {border: 1px solid #ffab00; border-radius: 5px; margin: 0.5%;padding: 0;
+    width: 48%; height: 32vh; float: left; }
+
+/*.paineis div:hover {
+    position: absolute;
+    top: 35%;
+    left:25%;
+    transform: scale(1.8, 2.6);
+    z-index: 3;
+    border: 2px solid #db170c; border-radius: 5px;
+}*/
+
+iframe{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+.firstVisualization iframe {height: 75%;}
+.secondVisualization iframe {height: 75%;}
+
+/*todas as respostas */
+.todasRespostas{border: 1px solid #ffab00; border-radius: 5px; margin: 1.5%;padding: 1.5%;
+    width: 14%; height: 70vh; float: right; overflow: auto; overflow-wrap: break-word; word-wrap: break-word; background-color:  aliceblue}
+
+
+
+/*menus individuais*/
+#primeiroPainel{background-color: aliceblue}
+.menu-um{display: none; float: right; background-color: cornflowerblue; padding: 0.5%;}
+.btn-menu-um {width: 56px; height: 56px; float: right; text-align: center; color: #fffbfb; border-radius: 56px;
+    cursor:pointer; background: url("../img/bbChart.png") center center/56px no-repeat; background-color: white;}
+
+.secondVisualization{background-color: aliceblue}
+.menu-dois{display: none; float: right; background-color: cornflowerblue; padding: 0.5%;}
+.btn-menu-dois {width: 56px; height: 15%; float: right; text-align: center; color: #fffbfb; border-radius: 56px;
+    cursor:pointer; background: url("../img/btn-menu-dois.png") center center/56px no-repeat; background-color: white;}
+
+#word-cloud{
+    float: right; background-color: white; border: 1px solid #ffab00; border-radius: 5px; width: 50%;
+    height: 15%;
+}
