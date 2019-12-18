@@ -119,7 +119,8 @@
 
 <script>
     //para o menu
-    $(".btn-menu").click(function() {
+
+    /*$(".btn-menu").click(function() {
         $(".menu").show();
     });
     $(".btn-close").click(function() {
@@ -140,15 +141,13 @@
         $(".menu-dois").hide();
     });
 
+
+     */
 </script>
 <script>
     //jquery
     //para as divs pesquisa atual...
-    $(".pesquisa-atual").hover(function(){
-        $(this).css("height", "150px");
-    }, function () {
-        $(this).css("height", "40px");
-    });
+
 
     $('.secondMenu > li > a').click(function(){
         alert($('ul > li').index($(this).parent()));
@@ -161,6 +160,7 @@
     //salvando o tamanho da janela
      var $preControlador = new PreControlador();
      $preControlador.setTamanhoJanela("primeiroPainel"); //considero que todos tem o memso tamanho
+    $preControlador.scriptMenuDashBoard();
      var $controladorPB = new controladorDeEventos();
      $controladorPB.setQuantidadeDeResposta();
 </script>
