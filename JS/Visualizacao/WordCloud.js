@@ -6,7 +6,7 @@ function WordCloud() {
         if ($newCloud !== null){
            //$contador.setAbstract($newCloud);
             $text_string = $newCloud;
-           sessionStorage.removeItem("textoRefinadoBBCitation");
+            //sessionStorage.removeItem("textoRefinadoBBCitation");
         }else{
             var $textoRefinado = JSON.parse(sessionStorage.getItem("abstractsString"));
             $text_string = $textoRefinado;
@@ -14,6 +14,7 @@ function WordCloud() {
         }
         this.drawWordCloud();
     };
+
     this.drawWordCloud = function() {
         //console.log($text_string);
         //$text_string = $text_string.match(/[a-zA-Z\u00C0-\u00FF']+/gi);
@@ -43,13 +44,13 @@ function WordCloud() {
         var width, height;
 
         if (largura !== null){
-            width = largura*1.9;
+            width = largura*0.8;
         }
         else width = $(document).width();
 
         if (altura !== null){
             //alert(altura- 56);
-            height = (altura*2.1) - 56;
+            height = (altura) - 80;
         } //por conta do menu
         else height = $(document).height();
 
