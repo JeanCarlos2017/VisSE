@@ -42,8 +42,11 @@ function PreControlador() {
             console.log($objeto);
             sessionStorage.setItem("first", $object);
         }
+
         if ($idIframe === 'second'){
             this.iniciaVisualizações("textoRefinadoBBCitation");
+            if ($nomeVisualizacao === 'HorizontalBarChart') document.getElementById("word-cloud").style.display ="none";
+            else document.getElementById("word-cloud").style.display ="block";
             $objeto = {
                 'nameVisual': $nomeVisualizacao,
                 'idIframe': $idIframe
@@ -51,22 +54,39 @@ function PreControlador() {
             $object = JSON.stringify($objeto);
             sessionStorage.setItem("second", $object);
         }
-        if ($idIframe === 'third'){
-            $objeto = {
-                'nameVisual': $nomeVisualizacao,
-                'idIframe': $idIframe
-            };
-            $object = JSON.stringify($objeto);
-            sessionStorage.setItem("third", $object);
-        }
-        if ($idIframe === 'fourth'){
-            $objeto = {
-                'nameVisual': $nomeVisualizacao,
-                'idIframe': $idIframe
-            };
-            $object = JSON.stringify($objeto);
-            sessionStorage.setItem("fourth", $object);
-        }
-    }
+
+    };
+
+    this.scriptMenuDashBoard = function (){
+
+        const $elementBTNMenuUM = document.getElementsByClassName("btn-menu-um");
+        $elementBTNMenuUM[0].addEventListener("click", function () {
+            document.getElementsByClassName("menu-um")[0].style.display = "block";
+        });
+
+        document.getElementsByClassName("btn-close-um")[0].addEventListener("click", function () {
+            document.getElementsByClassName("menu-um")[0].style.display = "none";
+        });
+
+
+        document.getElementsByClassName("btn-menu-dois")[0].addEventListener("click", function () {
+            document.getElementsByClassName("menu-dois")[0].style.display = "block";
+        });
+
+        document.getElementsByClassName("btn-close-dois")[0].addEventListener("click", function () {
+            document.getElementsByClassName("menu-dois")[0].style.display = "none";
+        });
+
+        document.getElementsByClassName("pesquisa-atual")[0].addEventListener("mouseover", function () {
+            document.getElementsByClassName("pesquisa-atual")[0].style.height = "150px"
+        });
+
+        document.getElementsByClassName("pesquisa-atual")[0].addEventListener("mouseout", function () {
+            document.getElementsByClassName("pesquisa-atual")[0].style.height = "40px"
+        });
+
+        document.getElementById("word-cloud").style.display ="none";
+
+    };
 
 }
